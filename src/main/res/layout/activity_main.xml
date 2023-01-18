@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="367dp"
+        android:layout_height="679dp"
+        android:orientation="vertical"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="24dp"
+        tools:layout_editor_absoluteY="26dp">
+
+        <TextView
+            android:id="@+id/instruction"
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:text="Instruction"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/text"
+            android:layout_width="match_parent"
+            android:layout_height="206dp"
+            android:text="This a simple mathematic games which is believe can train your mind. Two numbers are given randomly based on your level choice with a mathematic operator. You just calculates the answer, write your answer and press check button. Every correct answer will give you 1 point and any wrong answer will deduct 1 point"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/level"
+            android:layout_width="match_parent"
+            android:layout_height="33dp"
+            android:text="Choose Level"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="86dp"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/radioEasy"
+                android:layout_width="133dp"
+                android:layout_height="wrap_content"
+                android:onClick="clickEasy"
+                android:text="Easy"
+                android:textColor="@color/black" />
+
+            <RadioButton
+                android:id="@+id/radioMedium"
+                android:layout_width="132dp"
+                android:layout_height="wrap_content"
+                android:onClick="clickMedium"
+                android:text="Medium"
+                android:textColor="@color/black" />
+
+            <RadioButton
+                android:id="@+id/radioHard"
+                android:layout_width="132dp"
+                android:layout_height="wrap_content"
+                android:onClick="clickHard"
+                android:text="Hard"
+                android:textColor="@color/black" />
+
+        </RadioGroup>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="88dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/number1"
+                android:layout_width="27dp"
+                android:layout_height="53dp"
+                android:layout_weight="1"
+                android:text="1"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="50dp" />
+
+            <TextView
+                android:id="@+id/operator"
+                android:layout_width="wrap_content"
+                android:layout_height="53dp"
+                android:layout_weight="1"
+                android:text="-"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="50dp" />
+
+            <TextView
+                android:id="@+id/number2"
+                android:layout_width="wrap_content"
+                android:layout_height="53dp"
+                android:layout_weight="1"
+                android:text="0"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="50dp" />
+        </LinearLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="76dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:hint="Your Answer"
+                android:inputType="number"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="40dp"
+                android:textStyle="bold" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="match_parent"
+            android:layout_height="113dp"
+            android:layout_weight="1"
+            android:text="Check"
+            android:textAlignment="center" />
+
+        <TextView
+            android:id="@+id/point"
+            android:layout_width="match_parent"
+            android:layout_height="118dp"
+            android:layout_weight="1"
+            android:text="POINT : 0"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="50dp" />
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
